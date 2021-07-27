@@ -1,9 +1,3 @@
-/**
- * Elusive targets plugin - by JadedObsidian, maintained by rdil.
- *
- * @licence https://www.mozilla.org/en-US/MPL/2.0
- */
-
 /* eslint-disable */
 
 const THEREVOLUTIONARY = {
@@ -266,7 +260,7 @@ const THEBLACKHAT = {
             "943b8f1f-10c4-4dbf-a67e-25ed343290f5",
             "be610298-cbe8-47ce-9e90-951d2aae6f39",
             "04834714-406b-444e-b0d8-2f1054c1f8b5",
-            "d76ae2ee-05ea-4f2b-a9c7-62efa6422628"
+            "d76ae2ee-05ea-4f2b-a9c7-62efa6422628",
         ],
         EnableSaving: true,
         Objectives: [
@@ -2487,15 +2481,16 @@ const THEBROTHERS = {
                 ObjectiveType: "custom",
                 BriefingName: "Find intel",
                 BriefingText: "$loc UI_CONTRACT_PEACOCK_ALTINTEL1",
-                LongBriefingText: "The client requests that you discover why the Delgado Cartel is here.",
+                LongBriefingText:
+                    "The client requests that you discover why the Delgado Cartel is here.",
                 Image: "images/locations/location_marrakech_python/tile.jpg",
                 HUDTemplate: {
                     display: "Find out why the brothers are here",
-                    iconType: 17
+                    iconType: 17,
                 },
                 Definition: {
                     Context: {
-                        Targets: ["8de2b288-489b-4778-af8c-f6b3e6f84413"]
+                        Targets: ["8de2b288-489b-4778-af8c-f6b3e6f84413"],
                     },
                     States: {
                         Start: {
@@ -2503,15 +2498,15 @@ const THEBROTHERS = {
                                 Condition: {
                                     $eq: [
                                         "$Value.RepositoryId",
-                                        "8de2b288-489b-4778-af8c-f6b3e6f84413"
-                                    ]
+                                        "8de2b288-489b-4778-af8c-f6b3e6f84413",
+                                    ],
                                 },
-                                Transition: "Success"
-                            }
-                        }
-                    }
-                }
-            }
+                                Transition: "Success",
+                            },
+                        },
+                    },
+                },
+            },
         ],
         Bricks: [
             "assembly:/_pro/scenes/missions/marrakesh/mission_marrakesh_negroni.brick",
@@ -2614,45 +2609,80 @@ const THELIABILITY = {
     UserData: {},
 }
 
+const THEHEARTBREAKER = {
+    Data: {
+        Objectives: [
+            {
+                Id: "c2a5d24b-16a3-43bc-87be-08e97d3571fd",
+                Primary: true,
+                IsHidden: true,
+                SuccessEvent: {
+                    EventName: "Kill",
+                    EventValues: {
+                        RepositoryId: "4085a2b5-87dd-4286-a04a-5698d9812d16",
+                    },
+                },
+            },
+        ],
+        Bricks: [
+            "assembly:/_pro/scenes/missions/elegant/elusive_clerico.brick",
+        ],
+    },
+    Metadata: {
+        Id: "d8219c26-4122-4dde-bc42-382cdb374090",
+        CreatorUserId: "fadb923c-e6bb-4283-a537-eb4d1150262e",
+        Title: "UI_CONTRACT_CLERICO_TITLE",
+        BriefingVideo: "briefing_clerico",
+        DebriefingVideo: "debriefing_clerico",
+        ScenePath:
+            "assembly:/_pro/scenes/missions/elegant/scene_llama_elusive_clerico.entity",
+        TileImage: "images/contracts/elusive/s3_clerico/title.jpg",
+        Type: "mission",
+        Location: "LOCATION_ELEGANT_LLAMA",
+        Entitlements: ["LOCATION_ELEGANT"],
+    },
+}
+
 const ELUSIVES = [
-    THEREVOLUTIONARY,
-    THEPOLITICIAN,
-    THESTOWAWAY,
-    THEFUGITIVE,
-    THEBLACKHAT,
-    THEGUNRUNNER,
-    THESERIALKILLER,
-    THEWARLORD,
-    THEPRINCE,
-    THEDECIEVERS,
-    THEBADBOY,
-    THEAPPRAISER,
-    THEPHARMACIST,
-    THESENSATION,
-    THESURGEONS,
-    THEBROKER,
-    THEEXDICTATOR,
-    THETWIN,
-    THEPAPARAZZO,
-    THEFIXER,
-    THEBLACKMAILER,
-    THECHEF,
-    THECHAMELEON,
-    THEANGELOFDEATH,
-    THEENTERTAINER,
-    THEBOOKKEEPER,
     THEFORGER,
+    THECONGRESSMAN,
+    THEPRINCE,
+    THESENSATION,
+    THEGUNRUNNER,
+    THETWIN,
+    THEWILDCARD,
+    THEBROKER,
+    THEBLACKHAT,
+    THEPHARMACIST,
+    THEFIXER,
+    THEIDENTITYTHIEF,
+    THEEXDICTATOR,
+    THECHEF,
+    THEANGELOFDEATH,
+    THEGURU,
     THEFOODCRITIC,
+    THECHAMELEON,
+    THEBLACKMAILER,
+    THEWARLORD,
+    THESURGEONS,
+    THEBOOKKEEPER,
+    THEPAPARAZZO,
+    THEBADBOY,
+    THEFUGITIVE,
+    THEENTERTAINER,
+    THEDECIEVERS,
+    THEBROTHERS,
+    THEUNDYING,
+    THEREVOLUTIONARY,
+    THEAPPRAISER,
+    THEPOLITICIAN,
+    THEUNDYINGRETURNS,
+    THESERIALKILLER,
+    THESTOWAWAY,
     THECOLLECTOR,
     THEICONOCLAST,
-    THEUNDYING,
-    THEUNDYINGRETURNS,
-    THEWILDCARD,
-    THECONGRESSMAN,
-    THEGURU,
-    THEIDENTITYTHIEF,
-    THEBROTHERS,
     THELIABILITY,
+    THEHEARTBREAKER,
 ]
 
 module.exports = function elusiveTargets(pluginSystem) {
