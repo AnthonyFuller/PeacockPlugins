@@ -1,3 +1,9 @@
+/**
+ * Elusive targets plugin - by JadedObsidian, maintained by rdil.
+ *
+ * @licence https://www.mozilla.org/en-US/MPL/2.0
+ */
+
 /* eslint-disable */
 
 const THEREVOLUTIONARY = {
@@ -2471,39 +2477,6 @@ const THEBROTHERS = {
                     EventName: "Kill",
                     EventValues: {
                         RepositoryId: "3d1b5b6c-a1fe-430e-a4c4-57e76872fa1f",
-                    },
-                },
-            },
-            {
-                Id: "17bcb857-ae3b-4192-8a2e-bfebff7fa709",
-                Category: "primary",
-                Type: "statemachine",
-                ObjectiveType: "custom",
-                BriefingName: "Find intel",
-                BriefingText: "$loc UI_CONTRACT_PEACOCK_ALTINTEL1",
-                LongBriefingText:
-                    "The client requests that you discover why the Delgado Cartel is here.",
-                Image: "images/locations/location_marrakech_python/tile.jpg",
-                HUDTemplate: {
-                    display: "Find out why the brothers are here",
-                    iconType: 17,
-                },
-                Definition: {
-                    Context: {
-                        Targets: ["8de2b288-489b-4778-af8c-f6b3e6f84413"],
-                    },
-                    States: {
-                        Start: {
-                            ItemPickedUp: {
-                                Condition: {
-                                    $eq: [
-                                        "$Value.RepositoryId",
-                                        "8de2b288-489b-4778-af8c-f6b3e6f84413",
-                                    ],
-                                },
-                                Transition: "Success",
-                            },
-                        },
                     },
                 },
             },
