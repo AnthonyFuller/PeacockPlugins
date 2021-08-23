@@ -2,6 +2,6 @@
     "id": "elusive-targets",
     "name": "Elusive Targets",
     "version": "1.6.0",
-    "url": "https://gitlab.com/thepeacockproject/Plugins/-/raw/main/elusive-targets/ElusiveTargetsPlugin.js",
+    "url": "https://raw.githubusercontent.com/glacier-modding/PeacockPlugins/main/elusive-targets/ElusiveTargetsPlugin.js",
     "pluginFileName": "ElusiveTargetsPlugin.js"
 }
