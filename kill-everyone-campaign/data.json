@@ -1,0 +1,7 @@
+{
+    "id": "kill-everyone-campaign",
+    "name": "Kill Everyone Campaign",
+    "version": "1.0.0",
+    "url": "https://raw.githubusercontent.com/glacier-modding/PeacockPlugins/main/kill-everyone-campaign/KillEveryoneCampaign.plugin.js",
+    "pluginFileName": "KillEveryoneCampaign.plugin.js"
+}
